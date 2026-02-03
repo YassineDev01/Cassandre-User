@@ -1,0 +1,99 @@
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+
+      <!-- LOGO -->
+      <a href="{{ path('app_accueil') }}" class="flex items-center space-x-2">
+      
+        <span class="font-bold text-teal-600 text-lg">Cassandre</span>
+      </a>
+
+      <!-- MENU DESKTOP -->
+      <nav class="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <a href="{{ path('app_accueil') }}" class="hover:text-teal-600 transition">Accueil</a>
+        <a href="{{ path('app_service') }}" class="hover:text-teal-600 transition">Services</a>
+        <a href="{{ path('app_apropos') }}" class="hover:text-teal-600 transition">À propos</a>
+        <a href="{{ path('app_audits') }}" class="hover:text-teal-600 transition">Audits</a>
+        <a href="{{ path('app_certifications') }}" class="hover:text-teal-600 transition">Certifications</a>
+        <a href="{{ path('app_documentation') }}" class="hover:text-teal-600 transition">Documentation</a>
+        <a href="{{ path('app_contact') }}" class="hover:text-teal-600 transition">Contact</a>
+      </nav>
+
+      <!-- UTILISATEUR / BOUTONS DESKTOP -->
+      <div class="hidden md:flex items-center space-x-4">
+        {% if app.user %}
+          <span class="text-gray-700 font-medium">Bonjour, {{ app.user.prenom }}</span>
+
+          {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('admin') }}" class="text-gray-700 hover:text-teal-600 transition">Dashboard Admin</a>
+          {% endif %}
+          {% if is_granted('ROLE_AUDITOR') %}
+            <a href="#" class="text-gray-700 hover:text-teal-600 transition">Missions Auditeur</a>
+          {% endif %}
+          {% if is_granted('ROLE_EXAMINER') %}
+            <a href="#" class="text-gray-700 hover:text-teal-600 transition">Sessions Examinateur</a>
+          {% endif %}
+          {% if is_granted('ROLE_STAFF') %}
+            <a href="#" class="text-gray-700 hover:text-teal-600 transition">Accueil Personnel</a>
+          {% endif %}
+
+          <a href="{{ path('app_logout') }}" class="bg-red-500 hover:bg-red-600 text-white   inline-block rounded border   px-5 py-3 font-medium  shadow-sm transition-colors hover:bg-indigo-700">Se déconnecter</a>
+        {% else %}
+          <a href="{{ path('app_login') }}" class="inline-block rounded border border-indigo-600 bg-indigo-600 px-5 py-3 font-medium text-white shadow-sm transition-colors hover:bg-indigo-700">Connexion</a>
+          <a href="{{ path('app_register') }}" class="inline-block rounded border border-gray-200 px-5 py-3 font-medium text-gray-700 shadow-sm transition-colors hover:bg-gray-50 hover:text-gray-900">Inscription</a>
+        {% endif %}
+      </div>
+
+      <!-- BURGER MOBILE -->
+      <div class="md:hidden">
+        <button id="burger-btn" class="p-2 rounded text-gray-700 hover:bg-gray-100 transition">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MENU MOBILE -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 bg-white z-20 absolute top-full left-0 w-full">
+    <nav class="flex flex-col gap-3 p-4">
+      <a href="{{ path('app_accueil') }}" class="text-gray-700 hover:text-teal-600 transition">Accueil</a>
+      <a href="{{ path('app_service') }}" class="text-gray-700 hover:text-teal-600 transition">Services</a>
+      <a href="{{ path('app_apropos') }}" class="text-gray-700 hover:text-teal-600 transition">À propos</a>
+      <a href="{{ path('app_audits') }}" class="text-gray-700 hover:text-teal-600 transition">Audits</a>
+      <a href="{{ path('app_certifications') }}" class="text-gray-700 hover:text-teal-600 transition">Certifications</a>
+      <a href="{{ path('app_documentation') }}" class="text-gray-700 hover:text-teal-600 transition">Documentation</a>
+      <a href="{{ path('app_contact') }}" class="text-gray-700 hover:text-teal-600 transition">Contact</a>
+
+      <div class="pt-4 border-t border-gray-200 flex flex-col gap-2">
+        {% if app.user %}
+          <span class="text-gray-700">Bonjour, {{ app.user.prenom }}</span>
+          {% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('admin') }}" class="text-gray-700 hover:text-teal-600 transition">Dashboard Admin</a>
+          {% endif %}
+          {% if is_granted('ROLE_AUDITOR') %}
+            <a href="#" class="text-gray-700 hover:text-teal-600 transition">Missions Auditeur</a>
+          {% endif %}
+          {% if is_granted('ROLE_EXAMINER') %}
+            <a href="#" class="text-gray-700 hover:text-teal-600 transition">Sessions Examinateur</a>
+          {% endif %}
+          {% if is_granted('ROLE_STAFF') %}
+            <a href="#" class="text-gray-700 hover:text-teal-600 transition">Accueil Personnel</a>
+          {% endif %}
+          <a href="{{ path('app_logout') }}" class="btn bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm transition">Se déconnecter</a>
+        {% else %}
+          <a href="{{ path('app_login') }}" class="btn bg-teal-500 hover:bg-teal-600 text-white px-3 py-1 rounded text-sm transition">Connexion</a>
+          <a href="{{ path('app_register') }}" class="btn border border-teal-500 text-teal-500 hover:bg-teal-50 px-3 py-1 rounded text-sm transition">Inscription</a>
+        {% endif %}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.getElementById('burger-btn')?.addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
