@@ -1,52 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Mon site{% endblock %}</title>
-    {% block stylesheets %}
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    {% endblock %}
-</head>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("burger-btn");
-  const menu = document.getElementById("mobile-menu");
-  const links = menu.querySelectorAll("a");
-
-  if (!btn || !menu) return;
-
-  // Ouvrir / fermer le menu
-  btn.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-
-  // Fermer le menu quand on clique sur un lien
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      menu.classList.add("hidden");
-    });
-  });
-});
-</script>
-
-<body class="bg-gray-100 text-gray-900">
-
-    <!-- HEADER : visible sur toutes les pages -->
-    {% include 'partials/_header.html.twig' %}
-
-    <!-- CONTENU PRINCIPAL -->
-    <main>
-        {% block body %}{% endblock %}
-    </main>
-
-    <!-- FOOTER : visible sur toutes les pages -->
-    {% include 'partials/_footer.html.twig' %}
-
-    {% block javascripts %}{% endblock %}
-    
-
-</body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{% block title %}Mon site{% endblock %}</title>
+      
+      {% block stylesheets %}
+          <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      {% endblock %}
+  </head>
+  
+  <body class="bg-gray-100 text-gray-900">
+      <!-- HEADER : visible sur toutes les pages -->
+      {% include 'partials/_header.html.twig' %}
+  
+      <!-- CONTENU PRINCIPAL -->
+      <main>
+          {% block body %}{% endblock %}
+      </main>
+  
+      <!-- FOOTER : visible sur toutes les pages -->
+      {% include 'partials/_footer.html.twig' %}
+  
+      {% block javascripts %}{% endblock %}
+  </body>
 </html>

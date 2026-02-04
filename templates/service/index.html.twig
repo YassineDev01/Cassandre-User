@@ -3,101 +3,118 @@
 {% block title %}Hello ServiceController!{% endblock %}
 
 {% block body %}
-<div class="bg-gray-900">
-  <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-    <div class="relative isolate overflow-hidden bg-gray-800 px-6 pt-16 after:pointer-events-none after:absolute after:inset-0 after:inset-ring after:inset-ring-white/10 sm:rounded-3xl sm:px-16 after:sm:rounded-3xl md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-      <svg viewBox="0 0 1024 1024" aria-hidden="true" class="absolute top-1/2 left-1/2 -z-10 size-256 -translate-y-1/2 mask-[radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0">
-        <circle r="512" cx="512" cy="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7" />
-        <defs>
-          <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-            <stop stop-color="#7775D6" />
-            <stop offset="1" stop-color="#E935C1" />
-          </radialGradient>
-        </defs>
-      </svg>
-      <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-        <h2 class="text-3xl font-semibold tracking-tight text-balance text-white sm:text-4xl">page service</h2>
-        <p class="mt-6 text-lg/8 text-pretty text-gray-300">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-          <a href="#" class="btn btn-primary btn-md"> Get started </a>
-          <a href="#" class="text-sm/6 font-semibold text-white hover:text-gray-100">
-            Learn more
-            <span aria-hidden="true">→</span>
-          </a>
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+      Nos <span class="text-indigo-600">Services</span>
+    </h1>
+    <p class="mt-4 text-gray-700 text-lg sm:text-xl max-w-2xl mx-auto">
+      Découvrez comment nous pouvons vous aider à améliorer votre entreprise grâce à nos solutions sur mesure.
+    </p>
+  </div>
+</section>
+
+<!-- Services Cards -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Service 1 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l2 2"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L4 5v6c0 5 3.8 9.6 8 11 4.2-1.4 8-6 8-11V5l-8-3z"/>
+          </svg>
         </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">1on1 Coaching</h3>
+        <p class="text-gray-700 text-center">
+          Accompagnement personnalisé pour améliorer vos compétences et atteindre vos objectifs professionnels.
+        </p>
       </div>
-      <div class="relative mt-16 h-80 lg:mt-8">
-        <img width="1824" height="1080" src="https://tailwindcss.com/plus-assets/img/component-images/dark-project-app-screenshot.png" alt="App screenshot" class="absolute top-0 left-0 w-228 max-w-none rounded-md bg-white/5 ring-1 ring-white/10" />
+
+      <!-- Service 2 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Company Review</h3>
+        <p class="text-gray-700 text-center">
+          Analyse complète de votre entreprise pour identifier les forces, les faiblesses et les opportunités de croissance.
+        </p>
       </div>
+
+      <!-- Service 3 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l2 2"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Accounts Review</h3>
+        <p class="text-gray-700 text-center">
+          Évaluation des comptes financiers pour assurer transparence et conformité avec les normes en vigueur.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">HR Consulting</h3>
+        <p class="text-gray-700 text-center">
+          Conseils en gestion des ressources humaines pour optimiser la performance et le bien-être de vos équipes.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 6h18M3 14h18M3 18h18"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">SEO Optimisation</h3>
+        <p class="text-gray-700 text-center">
+          Optimisation de votre site web pour améliorer le référencement et générer plus de trafic qualifié.
+        </p>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Audit & Compliance</h3>
+        <p class="text-gray-700 text-center">
+          Vérification complète pour assurer que vos processus respectent les réglementations et standards du secteur.
+        </p>
+      </div>
+
     </div>
   </div>
+</section>
 
-
-<div class="p-8 space-y-12 bg-gray-50 min-h-screen">
-
-    <h1 class="heading-primary">Test Complet des Boutons</h1>
-
-    {# ------------------ PRIMARY BUTTONS ------------------ #}
-    <div class="space-y-4">
-        <h2 class="text-xl font-semibold">Primary Buttons</h2>
-        <div class="flex gap-4 flex-wrap">
-            <a href="#" class="btn btn-primary btn-sm">Primary Small</a>
-            <a href="#" class="btn btn-primary btn-md">Primary Medium</a>
-            <a href="#" class="btn btn-primary btn-lg">Primary Large</a>
-            <a href="#" class="btn btn-primary btn-md" disabled>Primary Disabled</a>
-            <button class="btn btn-primary btn-md btn-loading">Primary Loading</button>
-        </div>
-    </div>
-
-    {# ------------------ SECONDARY BUTTONS ------------------ #}
-    <div class="space-y-4">
-        <h2 class="text-xl font-semibold">Secondary Buttons</h2>
-        <div class="flex gap-4 flex-wrap">
-            <a href="#" class="btn btn-secondary btn-sm">Secondary Small</a>
-            <a href="#" class="btn btn-secondary btn-md">Secondary Medium</a>
-            <a href="#" class="btn btn-secondary btn-lg">Secondary Large</a>
-            <a href="#" class="btn btn-secondary btn-md" disabled>Secondary Disabled</a>
-            <button class="btn btn-secondary btn-md btn-loading">Secondary Loading</button>
-        </div>
-    </div>
-
-    {# ------------------ OUTLINE BUTTONS ------------------ #}
-    <div class="space-y-4">
-        <h2 class="text-xl font-semibold">Outline Buttons</h2>
-        <div class="flex gap-4 flex-wrap">
-            <a href="#" class="btn btn-outline btn-sm">Outline Small</a>
-            <a href="#" class="btn btn-outline btn-md">Outline Medium</a>
-            <a href="#" class="btn btn-outline btn-lg">Outline Large</a>
-            <a href="#" class="btn btn-outline btn-md" disabled>Outline Disabled</a>
-            <button class="btn btn-outline btn-md btn-loading">Outline Loading</button>
-        </div>
-    </div>
-
-    {# ------------------ BUTTONS AVEC ICONES ------------------ #}
-    <div class="space-y-4">
-        <h2 class="text-xl font-semibold">Buttons with Icons</h2>
-        <div class="flex gap-4 flex-wrap">
-            {% set icon %}
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            {% endset %}
-
-            <a href="#" class="btn btn-primary btn-md btn-icon-left">
-                {{ icon }} Icon Left
-            </a>
-
-            <a href="#" class="btn btn-secondary btn-md btn-icon-right">
-                Icon Right {{ icon }}
-            </a>
-
-            <a href="#" class="btn btn-outline btn-md btn-icon-left btn-icon-right">
-                {{ icon }} Both Icons {{ icon }}
-            </a>
-        </div>
-    </div>
-
-</div>
+<!-- CTA Section -->
+<section class="bg-indigo-400 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-bold text-white sm:text-4xl">Prêt à améliorer vos performances ?</h2>
+    <p class="mt-4 text-indigo-100 max-w-2xl mx-auto">
+      Contactez notre équipe dès aujourd’hui et découvrez comment nous pouvons vous aider.
+    </p>
+    <a href="{{ path('app_contact') }}" class="mt-6 inline-block bg-white text-indigo-600 font-medium px-8 py-3 rounded shadow hover:bg-gray-100 transition">
+      Contactez-nous
+    </a>
+  </div>
+</section>
 
 
 {% endblock %}

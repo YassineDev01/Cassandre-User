@@ -4,32 +4,117 @@
 
 {% block body %}
 
-<div class="bg-gray-900">
- 
+<section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl font-bold text-gray-900 sm:text-5xl">
+      Nos <span class="text-indigo-600">Services</span>
+    </h1>
+    <p class="mt-4 text-gray-700 text-lg sm:text-xl max-w-2xl mx-auto">
+      Découvrez comment nous pouvons vous aider à améliorer votre entreprise grâce à nos solutions sur mesure.
+    </p>
+  </div>
+</section>
 
-  <div class="relative isolate px-6 pt-14 lg:px-8">
-    <div aria-hidden="true" class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%-11rem)] aspect-1155/678 w-144.5 -translate-x-1/2 rotate-30 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-288.75"></div>
-    </div>
-    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-      <div class="hidden sm:mb-8 sm:flex sm:justify-center">
-        <div class="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
-          Announcing our next round of funding. <a href="#" class="font-semibold text-indigo-400"><span aria-hidden="true" class="absolute inset-0"></span>Read more <span aria-hidden="true">&rarr;</span></a>
+<!-- Services Cards -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Service 1 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l2 2"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 2L4 5v6c0 5 3.8 9.6 8 11 4.2-1.4 8-6 8-11V5l-8-3z"/>
+          </svg>
         </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">1on1 Coaching</h3>
+        <p class="text-gray-700 text-center">
+          Accompagnement personnalisé pour améliorer vos compétences et atteindre vos objectifs professionnels.
+        </p>
       </div>
-      <div class="text-center">
-        <h1 class="text-7xl text-white">Page services</h1>
-        <p class="text-2xl text-gray-500">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-indigo-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Get started</a>
-          <a href="#" class="text-sm/6 font-semibold text-white">Learn more <span aria-hidden="true">→</span></a>
+
+      <!-- Service 2 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18"/>
+          </svg>
         </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Company Review</h3>
+        <p class="text-gray-700 text-center">
+          Analyse complète de votre entreprise pour identifier les forces, les faiblesses et les opportunités de croissance.
+        </p>
       </div>
-    </div>
-    <div aria-hidden="true" class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-      <div style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)" class="relative left-[calc(50%+3rem)] aspect-1155/678 w-144.5 -translate-x-1/2 bg-linear-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-288.75"></div>
+
+      <!-- Service 3 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l2 2"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Accounts Review</h3>
+        <p class="text-gray-700 text-center">
+          Évaluation des comptes financiers pour assurer transparence et conformité avec les normes en vigueur.
+        </p>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">HR Consulting</h3>
+        <p class="text-gray-700 text-center">
+          Conseils en gestion des ressources humaines pour optimiser la performance et le bien-être de vos équipes.
+        </p>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 6h18M3 14h18M3 18h18"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">SEO Optimisation</h3>
+        <p class="text-gray-700 text-center">
+          Optimisation de votre site web pour améliorer le référencement et générer plus de trafic qualifié.
+        </p>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="bg-gray-50 p-6 rounded-2xl shadow hover:shadow-lg transition">
+        <div class="mb-4">
+          <svg class="h-12 w-12 text-indigo-600 mx-auto" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-2 text-center">Audit & Compliance</h3>
+        <p class="text-gray-700 text-center">
+          Vérification complète pour assurer que vos processus respectent les réglementations et standards du secteur.
+        </p>
+      </div>
+
     </div>
   </div>
-</div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-indigo-600 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl font-bold text-white sm:text-4xl">Prêt à améliorer vos performances ?</h2>
+    <p class="mt-4 text-indigo-100 max-w-2xl mx-auto">
+      Contactez notre équipe dès aujourd’hui et découvrez comment nous pouvons vous aider.
+    </p>
+    <a href="{{ path('app_contact') }}" class="mt-6 inline-block bg-white text-indigo-600 font-medium px-8 py-3 rounded shadow hover:bg-gray-100 transition">
+      Contactez-nous
+    </a>
+  </div>
+</section>
 
 {% endblock %}
