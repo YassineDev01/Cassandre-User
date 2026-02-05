@@ -19,36 +19,36 @@ final class AccueilController extends AbstractController
     #[Route('/service', name: 'app_service')]
     public function service(): Response
     {
-        return $this->render('pages/Contact.html.twig');
+        return $this->render('pages/service.html.twig');
     }
 
     #[Route('/a-propos', name: 'app_apropos')]
     public function apropos(): Response
     {
-        return $this->render('pages/Apropos.html.twig');
+        return $this->render('pages/apropos.html.twig');
     }
 
     #[Route('/audits', name: 'app_audits')]
     public function audits(): Response
     {
-        return $this->render('pages/AuditsDeSecurite.html.twig');
+        return $this->render('pages/auditsdesecurite.html.twig');
     }
 
     #[Route('/certifications', name: 'app_certifications')]
     public function certifications(): Response
     {
-        return $this->render('pages/CertificationsProfessionnelles.html.twig');
+        return $this->render('pages/certificationsprofessionnelles.html.twig');
     }
 
     #[Route('/documentation', name: 'app_documentation')]
     public function documentation(): Response
     {
-        return $this->render('pages/Documentation.html.twig');
+        return $this->render('pages/documentation.html.twig');
     }
 
     #[Route('/contact', name: 'app_contact')]
     public function contact(): Response
     {
-        return $this->render('pages/Contact.html.twig');
+        return $this->render('pages/contact.html.twig');
     }
 }

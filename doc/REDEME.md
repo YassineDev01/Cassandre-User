@@ -1,0 +1,48 @@
+# Symfony Cheat Sheet - Cassandre User
+
+Toutes les commandes utiles pour développement et production Symfony.
+
+```bash
+# =========================
+# Serveur Symfony
+# =========================
+symfony serve                               # Lancer le serveur dev
+APP_ENV=prod APP_DEBUG=0 symfony server:start # Lancer le serveur prod
+
+# =========================
+# Cache
+# =========================
+php bin/console cache:clear                 # Vider le cache dev
+rm -rf var/cache/prod                        # Supprimer le cache prod
+
+# =========================
+# Routes et services
+# =========================
+php bin/console debug:router                 # Lister les routes
+php bin/console debug:container              # Lister les services
+
+# =========================
+# Base de données (Doctrine)
+# =========================
+php bin/console make:entity                  # Créer une entité
+php bin/console doctrine:migrations:diff    # Générer migration
+php bin/console doctrine:migrations:migrate # Appliquer migration
+
+# =========================
+# Logs
+# =========================
+tail -f var/log/prod.log                     # Suivre les logs prod en temps réel
+
+# =========================
+# Front-end (Tailwind CSS)
+# =========================
+npm run dev                                  # Compiler les assets dev
+npm run build                                # Compiler les assets prod
+
+# =========================
+# Autres commandes utiles
+# =========================
+php bin/console make:controller NomDuController # Créer un contrôleur
+php bin/console make:form NomDuFormType        # Créer un formulaire
+php bin/phpunit                                # Lancer les tests PHPUnit (si configuré)
+```
