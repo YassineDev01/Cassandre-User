@@ -4,6 +4,7 @@
 
 {% block body %}
 <div class="min-h-screen flex items-center justify-center bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        
 
         <form method="post" class="max-w-md w-full bg-white p-8 rounded shadow-lg">
             {% if error %}
@@ -16,9 +17,14 @@
                 </div>
             {% endif %}
 
-   
         
             <h1 class="text-3xl font-extrabold text-gray-900 text-center mb-6">Connectez-vous</h1>
+
+            {% for flash_message in app.flashes('success') %}
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                    <span class="block sm:inline">{{ flash_message }}</span>
+                </div>
+            {% endfor %}
             <label for="inputEmail">Email</label>
             <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="shadow appearance-none border rounded mb-5 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'" autocomplete="email" required autofocus>
             <label for="inputPassword">Password</label>
