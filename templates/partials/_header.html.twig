@@ -28,7 +28,12 @@
       <!-- UTILISATEUR / BOUTONS DESKTOP -->
       <div class="hidden md:flex items-center space-x-4">
         {% if app.user %}
-          <span class="text-gray-700 font-medium">Bonjour, {{ app.user.prenom }}</span>
+          <a href="{{ path('profile_view') }}" class=" text-gray-700 hover:text-indigo-700 transition"
+              title="Mon profil">
+              <i class="fa-solid fa-user pr-1"></i>
+              {{ app.user.prenom }}
+          </a>
+
 
           {% if is_granted('ROLE_ADMIN') %}
             <a href="{{ path('admin') }}" class="text-gray-700 hover:text-indigo-700 transition">Dashboard Admin</a>
@@ -77,7 +82,12 @@
 
       <div class="pt-4 border-t border-gray-200 flex flex-col gap-2">
         {% if app.user %}
-          <span class="text-gray-700">Bonjour, {{ app.user.prenom }}</span>
+          <a href="{{ path('profile_view') }}" class="text-gray-700 hover:text-indigo-700 transition" title="Mon profil">
+              <i class="fa-solid fa-user pr-1"></i>
+              {{ app.user.prenom }}
+          </a>
+
+
           {% if is_granted('ROLE_ADMIN') %}
             <a href="{{ path('admin') }}" class="text-gray-700 hover:text-indigo-700 transition">Dashboard Admin</a>
           {% endif %}

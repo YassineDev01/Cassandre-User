@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile {{ app.user.prenom }} {{ app.user.nom }}{% endblock %}
+
+{% block body %}
+<div class="flex min-h-screen bg-gray-100">
+
+
+    <!-- Sidebar gauche -->
+    <aside class="w-64 bg-white shadow-md">
+        <div class="p-6">
+            <h2 class="text-xl font-bold mb-8">Mon Profil</h2>
+            
+            <nav class="flex flex-col space-y-2">
+    <a href="{{ path('profile_view') }}" 
+       class="px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition {{ app.request.get('_route') == 'profile_view' ? 'bg-blue-500 text-white' : '' }}">
+        Voir Profil
+    </a>
+    <a href="{{ path('profile_edit') }}" 
+       class="px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition {{ app.request.get('_route') == 'profile_edit' ? 'bg-blue-500 text-white' : '' }}">
+        Modifier Profil
+    </a>
+    <a href="{{ path('profile_change_password') }}" 
+       class="px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition {{ app.request.get('_route') == 'profile_change_password' ? 'bg-blue-500 text-white' : '' }}">
+        Changer Mot de Passe
+    </a>
+    <a href="{{ path('profile_change_email') }}" 
+       class="px-4 py-2 rounded hover:bg-blue-500 hover:text-white transition {{ app.request.get('_route') == 'profile_change_email' ? 'bg-blue-500 text-white' : '' }}">
+        Changer Email
+    </a>
+</nav>
+
+        </div>
+    </aside>
+
+    <!-- Contenu principal -->
+    <main class="flex-1 p-10">
+        <h1 class="text-3xl font-bold mb-6">Bienvenue, {{ app.user.prenom }} !</h1>
+
+        <div class="bg-white shadow-md rounded-lg p-6">
+            {% block content %}
+                {% if content_template is defined %}
+                    {% include content_template %}
+                {% endif %}
+            {% endblock %}
+        </div>
+    </main>
+
+</div>
+{% endblock %}

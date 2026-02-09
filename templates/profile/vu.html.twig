@@ -1,0 +1,12 @@
+<h2 class="text-xl font-semibold mb-4">Informations personnelles</h2>
+{% for flash_message in app.flashes('success') %}
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <span class="block sm:inline">{{ flash_message }}</span>
+    </div>
+{% endfor %}
+        <ul class="space-y-2 text-gray-700">
+            <li><span class="font-semibold">Nom :</span> {{ app.user.nom }}</li>
+            <li><span class="font-semibold">Prénom :</span> {{ app.user.prenom }}</li>
+            <li><span class="font-semibold">Email :</span> {{ app.user.email }}</li>
+            <li><span class="font-semibold">Rôle :</span> {{ app.user.role }}</li>
+        </ul>
